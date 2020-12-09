@@ -25,5 +25,12 @@ namespace RPG.Dialogue.Editor
             }
             return false;
         }
+
+        private void OnGUI() 
+        {
+            EditorGUILayout.LabelField("Interesting Label", "Offset label?");
+            EditorGUILayout.LabelField("Another interesting label");
+            EditorGUILayout.LabelField("Guess what? A third!");
+        }
     }
 }
