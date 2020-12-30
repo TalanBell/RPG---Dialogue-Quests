@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
+using UnityEngine;
 
 namespace RPG.Dialogue.Editor
 {
@@ -53,7 +53,12 @@ namespace RPG.Dialogue.Editor
             {
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUILayout.LabelField(node.text);
+                    string newText = EditorGUILayout.TextField(node.text);
+                    if (newText != node.text)
+                    {
+                        node.text = newText;
+                        EditorUtility.SetDirty(selectedDialogue);
+                    }
                 }
             }
         }

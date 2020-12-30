@@ -19,14 +19,14 @@ MonoBehaviour:
     - b
     - c
   - uniqueID: b
-    text: Hello yourself.
+    text: Hello yourself. How are you?
     children: []
   - uniqueID: c
     text: Get lost!
     children: []
   - uniqueID: d
-    text: 
+    text: Nice weather we're having.
     children: []
   - uniqueID: e
-    text: 
+    text: Do you want to know about this town?
     children: []
