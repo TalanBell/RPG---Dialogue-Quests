@@ -12,5 +12,5 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Editing dynamic data
 * Implementing Undo
 * Styling Nodes
-* Dragging Nodes
+* Dragging Nodes (1)
 * 

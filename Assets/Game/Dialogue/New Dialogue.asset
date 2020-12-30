@@ -18,15 +18,45 @@ MonoBehaviour:
     children:
     - b
     - c
+    rect:
+      serializedVersion: 2
+      x: 235
+      y: 45
+      width: 200
+      height: 100
   - uniqueID: b
     text: Hello yourself. How are you?
     children: []
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 100
   - uniqueID: c
     text: Get lost!
     children: []
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 100
   - uniqueID: d
     text: Nice weather we're having.
     children: []
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 100
   - uniqueID: e
-    text: Do you want to know about this town?
+    text: Do you want to know about our town?
     children: []
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 200
+      height: 100
