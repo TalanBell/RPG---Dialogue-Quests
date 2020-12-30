@@ -12,5 +12,6 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Editing dynamic data
 * Implementing Undo
 * Styling Nodes
-* Dragging Nodes (1)
-* 
+* Dragging Nodes (1) - only `root' node to begin with
+* Dragging Nodes (2) - actual node clicked, with offset for mouse posn in node
+*
