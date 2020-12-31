@@ -23,9 +23,9 @@ MonoBehaviour:
       x: 6
       y: 157
       width: 200
-      height: 100
+      height: 200
   - uniqueID: b
-    text: Hello yourself. How are you?
+    text: Hello yourself.
     children: []
     rect:
       serializedVersion: 2
