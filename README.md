@@ -17,3 +17,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Dictionaries for Lookups - and yield return. Putting child node labels on root node
 * Drawing Bezier Curves
 * Adding Nodes - using buttons on existing nodes & [NonSerialize] to stop odd nodes appearing
+* Deleting Nodes - and arranging buttons horizontally

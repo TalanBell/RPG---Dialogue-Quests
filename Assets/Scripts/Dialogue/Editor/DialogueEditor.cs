@@ -18,6 +18,8 @@ namespace RPG.Dialogue.Editor
         Vector2 draggingOffset;
         [NonSerialized]
         DialogueNode creatingNode = null;
+        [NonSerialized]
+        DialogueNode deletingNode = null;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -39,7 +41,7 @@ namespace RPG.Dialogue.Editor
 
         private void OnEnable() 
         {
-            Selection.selectionChanged += OnSelectionChanged;   // C# event. No () or fn called then
+            Selection.selectionChanged += OnSelectionChanged;   // C# event. No () or fn called immediately
 
             nodeStyle = new GUIStyle();
             nodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D; //blue nodes
@@ -81,6 +83,12 @@ namespace RPG.Dialogue.Editor
                     selectedDialogue.CreateNode(creatingNode);
                     creatingNode = null;
                 }
+                if (deletingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
+                }
             }
         }
 
@@ -119,10 +127,19 @@ namespace RPG.Dialogue.Editor
                 node.text = newText;
             }
 
+            GUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("-"))
+            {
+                deletingNode = node;
+            }
+            
             if (GUILayout.Button("+"))
             {
                 creatingNode = node;
             }
+
+            GUILayout.EndHorizontal();
 
             GUILayout.EndArea();
         }
