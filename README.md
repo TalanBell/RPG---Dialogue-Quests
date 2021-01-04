@@ -18,3 +18,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Drawing Bezier Curves
 * Adding Nodes - using buttons on existing nodes & [NonSerialize] to stop odd nodes appearing
 * Deleting Nodes - and arranging buttons horizontally
+* Linking Nodes - with link button changing to child/cancel/unlink as needed
