@@ -21,3 +21,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Linking Nodes - with link button changing to child/cancel/unlink as needed
 * Scroll Views - and detecting scrolled mouse positions
 * Drag to Scroll
+* Canvas Background - and how to tile an image onto the background
