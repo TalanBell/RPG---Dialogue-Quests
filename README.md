@@ -22,3 +22,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Scroll Views - and detecting scrolled mouse positions
 * Drag to Scroll
 * Canvas Background - and how to tile an image onto the background
+* Dialogue Node Scriptable Objects - plus fixing Undo & destroying nodes/links
