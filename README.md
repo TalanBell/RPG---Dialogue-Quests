@@ -24,3 +24,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Canvas Background - and how to tile an image onto the background
 * Dialogue Node Scriptable Objects - plus fixing Undo & destroying nodes/links
 * Asset Database - and fixing root node creation/Asset Database entry
+* Setters, Getters & Undo - restoring Undo function after change to ScriptableObjects + removing bug
