@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace RPG.Dialogue
 {
     public class DialogueNode : ScriptableObject
     {
+        [SerializeField]
+        bool isPlayerSpeaking = false;
         [SerializeField]
         string text;
         [SerializeField]
@@ -24,6 +27,10 @@ namespace RPG.Dialogue
         public string GetText()
         {
             return text;
+        }
+        public bool IsPlayerSpeaking()
+        {
+            return isPlayerSpeaking;
         }
 
 #if UNITY_EDITOR
@@ -56,6 +63,13 @@ namespace RPG.Dialogue
                 text = newText;
                 EditorUtility.SetDirty(this);
             }
+        }
+
+        public void SetPlayerIsSpeaking(bool newIsPlayerSpeaking)
+        {
+            Undo.RecordObject(this, "Changed Dialogue Node Speaker");
+            isPlayerSpeaking = newIsPlayerSpeaking;
+            EditorUtility.SetDirty(this);
         }
 #endif
     }

@@ -11,6 +11,8 @@ namespace RPG.Dialogue
     {
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
+        [SerializeField]
+        Vector2 newNodeOffset = new Vector2(250, 0);
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
         
@@ -65,13 +67,15 @@ namespace RPG.Dialogue
             OnValidate();
         }
 
-        private static DialogueNode MakeNode(DialogueNode parent)
+        private DialogueNode MakeNode(DialogueNode parent)
         {
             DialogueNode newNode = CreateInstance<DialogueNode>();
             newNode.name = Guid.NewGuid().ToString();
             if (parent != null)
             {
                 parent.AddChild(newNode.name);
+                newNode.SetPlayerIsSpeaking(!parent.IsPlayerSpeaking());
+                newNode.SetPosition(parent.GetRect().position + newNodeOffset);
             }
 
             return newNode;
