@@ -29,3 +29,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Alternating Speakers - and offsetting new child nodes to right of parent
 * Atomic Design - adding Dialogue window to UI
 * Mockup to Auto Layout
+* Styling UI
