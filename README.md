@@ -30,3 +30,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Atomic Design - adding Dialogue window to UI
 * Mockup to Auto Layout
 * Styling UI
+* Dialogue Architecture - linking UI to dialogue nodes via PlayerConversant.cs
