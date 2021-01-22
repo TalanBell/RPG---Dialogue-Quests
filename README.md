@@ -32,3 +32,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Styling UI
 * Dialogue Architecture - linking UI to dialogue nodes via PlayerConversant.cs
 * Nested ScriptableObject Rename Bug - a work around
+* Choosing a Random Response
