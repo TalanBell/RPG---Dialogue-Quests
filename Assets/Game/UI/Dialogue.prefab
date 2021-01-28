@@ -691,6 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIText: {fileID: 3039488577320835543}
   nextButton: {fileID: 2336556915639062849}
+  AIResponse: {fileID: 7028175528652444182}
   choiceRoot: {fileID: 6661080393902423376}
   choicePrefab: {fileID: 7649131366646691201, guid: 4727caf98f883a44c996a3b4fb727941,
     type: 3}

@@ -15,14 +15,8 @@ namespace RPG.Dialogue
         Vector2 newNodeOffset = new Vector2(250, 0);
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
-        
-// #if UNITY_EDITOR
-//         private void Awake() {
-//             OnValidate();
-//         }
-// #endif
 
-        private void OnValidate() 
+        private void OnValidate()
         {
             nodeLookup.Clear();
             foreach (DialogueNode node in GetAllNodes())
@@ -31,7 +25,7 @@ namespace RPG.Dialogue
             }
         }
 
-        public IEnumerable<DialogueNode> GetAllNodes()        
+        public IEnumerable<DialogueNode> GetAllNodes()
         {
             return nodes;
         }
@@ -40,15 +34,38 @@ namespace RPG.Dialogue
         {
             return nodes[0];
         }
-
+        
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
             foreach (string childID in parentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
-                    yield return nodeLookup[childID];  // Dictionary lookup replaces nested foreach  
-                }                                      // yield return neatens code, but same as List
+                    yield return nodeLookup[childID];
+                }
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode currentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(currentNode))
+            {
+                if (node.IsPlayerSpeaking())
+                {
+                    yield return node;
+                }
+            }
+        }
+
+
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(currentNode))
+            {
+                if (!node.IsPlayerSpeaking())
+                {
+                    yield return node;
+                }
             }
         }
 
