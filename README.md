@@ -37,3 +37,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Building a Choice List - with correct version of deleting previous choices
 * Choosing State
 * Choosing a Node
+* Starting a Dialogue

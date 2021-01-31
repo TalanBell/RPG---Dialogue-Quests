@@ -16,8 +16,7 @@ namespace RPG.Dialogue
 
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-        private void OnValidate()
-        {
+        private void OnValidate() {
             nodeLookup.Clear();
             foreach (DialogueNode node in GetAllNodes())
             {
@@ -34,7 +33,7 @@ namespace RPG.Dialogue
         {
             return nodes[0];
         }
-        
+
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
             foreach (string childID in parentNode.GetChildren())
@@ -78,26 +77,6 @@ namespace RPG.Dialogue
             AddNode(newNode);
         }
 
-        private void AddNode(DialogueNode newNode)
-        {
-            nodes.Add(newNode);
-            OnValidate();
-        }
-
-        private DialogueNode MakeNode(DialogueNode parent)
-        {
-            DialogueNode newNode = CreateInstance<DialogueNode>();
-            newNode.name = Guid.NewGuid().ToString();
-            if (parent != null)
-            {
-                parent.AddChild(newNode.name);
-                newNode.SetPlayerIsSpeaking(!parent.IsPlayerSpeaking());
-                newNode.SetPosition(parent.GetRect().position + newNodeOffset);
-            }
-
-            return newNode;
-        }
-
         public void DeleteNode(DialogueNode nodeToDelete)
         {
             Undo.RecordObject(this, "Deleted Dialogue Node");
@@ -107,6 +86,26 @@ namespace RPG.Dialogue
             Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
+        private DialogueNode MakeNode(DialogueNode parent)
+        {
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+            newNode.name = Guid.NewGuid().ToString();
+            if (parent != null)
+            {
+                parent.AddChild(newNode.name);
+                newNode.SetPlayerSpeaking(!parent.IsPlayerSpeaking());
+                newNode.SetPosition(parent.GetRect().position + newNodeOffset);
+            }
+
+            return newNode;
+        }
+
+        private void AddNode(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            OnValidate();
+        }
+
         private void CleanDanglingChildren(DialogueNode nodeToDelete)
         {
             foreach (DialogueNode node in GetAllNodes())
@@ -114,7 +113,7 @@ namespace RPG.Dialogue
                 node.RemoveChild(nodeToDelete.name);
             }
         }
-        #endif
+#endif
 
         public void OnBeforeSerialize()
         {
@@ -122,8 +121,9 @@ namespace RPG.Dialogue
             if (nodes.Count == 0)
             {
                 DialogueNode newNode = MakeNode(null);
-                AddNode(newNode);            }
-            
+                AddNode(newNode);
+            }
+
             if (AssetDatabase.GetAssetPath(this) != "")
             {
                 foreach (DialogueNode node in GetAllNodes())
