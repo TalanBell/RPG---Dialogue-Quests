@@ -38,3 +38,5 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Choosing State
 * Choosing a Node
 * Starting a Dialogue
+* Quitting a Dialogue - and updated Unity to 2020.2.2f1
+
