@@ -40,5 +40,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Starting a Dialogue
 * Quitting a Dialogue - and updated Unity to 2020.2.2f1
 * IRaycastable Dialogue - dialogue only starts when suitable NPC clicked on
-
-
+* Triggering Dialogue Actions
