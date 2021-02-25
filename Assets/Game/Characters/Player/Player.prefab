@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bf70b1ee679384b9433a8bfd46e619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDialogue: {fileID: 11400000, guid: e94dbacec53562249bdc41a0bdc407e4, type: 2}
+  playerName: Herbert Socksworthy
 --- !u!1001 &1080417002832114521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 2693053585468447484, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3125957438692005694, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 4375870170505401555, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5401972681186859721, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -314,18 +314,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1080417002832114521}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &3607260873070860907 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4391565082401990962, guid: 750e3c6876a501e42b5827ec7a3d24d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1080417002832114521}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1305870661446727405 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2080957664971146676, guid: 750e3c6876a501e42b5827ec7a3d24d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1080417002832114521}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1884815995081139704 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1501492681116784289, guid: 750e3c6876a501e42b5827ec7a3d24d1,
@@ -338,6 +326,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565a6cf83d2e1ac4fa7d453686c7ff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &3607260873070860907 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4391565082401990962, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080417002832114521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1305870661446727405 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2080957664971146676, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1080417002832114521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5590448998644717528
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -431,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -825,6 +827,7 @@ MonoBehaviour:
   choiceRoot: {fileID: 4447395866759993679}
   choicePrefab: {fileID: 4856600071338685825, guid: 4727caf98f883a44c996a3b4fb727941,
     type: 3}
+  conversantName: {fileID: 7338191358280008143}
 --- !u!1 &5881212322193145598
 GameObject:
   m_ObjectHideFlags: 0
