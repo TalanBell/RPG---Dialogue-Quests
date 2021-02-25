@@ -42,3 +42,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * IRaycastable Dialogue - dialogue only starts when suitable NPC clicked on
 * Triggering Dialogue Actions
 * Dialogue Trigger Components
+* Enemy Aggro Groups - and updating Unity to 2020.2.3f1
