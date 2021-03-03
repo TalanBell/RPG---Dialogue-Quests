@@ -45,4 +45,4 @@ Following the Udemy/GameDev.tv course 'Unity RPG Series'. (Split into 3 courses:
 * Enemy Aggro Groups - and updating Unity to 2020.2.3f1
 * Conversant Names
 * Quest List UI Outline - error with scrolling correctly to be resolved
-
+* Quest Tooltup Outline - and updating Unity to 2020.2.6f1
